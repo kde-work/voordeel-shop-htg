@@ -1,0 +1,760 @@
+.water-testing {
+    margin: 2em 0 5em;
+    position: relative;
+}
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    height: 36px;
+    padding: 3px 4px 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 5px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #bbb transparent transparent transparent;
+}
+.water-testing__label {
+    display: block;
+    color: #888;
+    font-size: 12px;
+}
+.water-testing__title {
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+.water-testing__col--100p {
+    width: 100%;
+}
+.water-testing__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0 28px;
+}
+.water-testing__col + .water-testing__col {
+    margin-left: 30px;
+}
+.water-testing__col--or + .water-testing__col {
+    margin-left: 24px;
+}
+.water-testing__col--100p + .water-testing__col, .water-testing .water-testing__col--100p {
+    margin-left: 0;
+}
+.water-testing .water-testing__col--or {
+    color: #444;
+    margin: auto 0 5px 24px;
+}
+.wt-tests__item--deactivate {
+    position: relative;
+}
+.wt-tests__item--deactivate::after {
+    content: '';
+    display: block;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    z-index: 3;
+}
+.wt-tests__item--deactivate .wt-tests__label {
+    color: #777;
+    cursor: default;
+    background: #fff !important;
+    font-weight: 500 !important;
+}
+.select2-results__option {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 7px 6px;
+}
+.select2-dropdown {
+    border-radius: 1px;
+}
+.water-testing__h {
+}
+.select2-container {
+    min-width: 280px;
+    width: 280px !important;
+}
+.water-testing__hs {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0.6em 0 1.3em;
+    position: relative;
+}
+.water-testing__hs > span {
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    padding: 0 9px;
+    margin-left: 16px;
+}
+.water-testing__hs::after {
+    background: -moz-linear-gradient(left,  rgba(34,34,34,1) 0%, rgba(158,158,158,0) 56%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(left,  rgba(34,34,34,1) 0%,rgba(158,158,158,0) 56%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right,  rgba(34,34,34,1) 0%,rgba(158,158,158,0) 56%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#00ffffff',GradientType=1 );
+    content: '';
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 100%;
+}
+.water-testing__value {
+    font-weight: bold;
+}
+.water-testing__result {
+    padding: 6px 0 5px;
+}
+.water-testing__result-product a {
+    text-decoration: underline;
+}
+.water-testing__result-box {
+    align-items: center;
+    background: #b47a2822;
+    display: flex;
+    margin: 1.2em 0 1.2em;
+    padding: 5px 24px 5px 11px;
+}
+.wt-result-box--t , .wt-info-box--t {
+    display: none;
+}
+.wt-info-box {
+    background: #ededf1;
+}
+.wt-result-boxes {
+    margin-bottom: 2em;
+}
+.wt-product {
+    border-radius: 2px;
+    box-shadow: 1px 1px 24px rgba(0,0,0,.08);
+    height: max-content;
+    margin: 20px;
+    overflow: hidden;
+    width: 220px;
+}
+.wt-product__img {
+    background: transparent no-repeat center center / cover;
+    display: block;
+    height: 190px;
+    width: 220px;
+}
+.wt-product__title {
+    color: #222;
+    display: block;
+    font-size: 1em;
+    margin: 0;
+    padding: .1em 0 .4em;
+    text-align: center;
+}
+.wt-product__cost {
+    color: #656565 !important;
+    font-size: 14px;
+    margin: 0 20px 0 0;
+}
+.wt-product__meta {
+    display: flex;
+    justify-content: center;
+}
+.wt-product__count {
+    display: flex;
+    font-size: 18px;
+}
+.wt-product__count input {
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    width: 30px;
+}
+.wt-product__count-btn {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.wt-product__button {
+    cursor: pointer;
+    border: 3px solid #222;
+    border-radius: 2px;
+    margin: 14px 0 7px;
+    min-height: 35px;
+    padding: 6px 8px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.wt-product__button:hover {
+    background: #222;
+    color: #fff;
+}
+.wt-product__cont {
+    padding: 14px;
+}
+.wt-products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+}
+.water-testing__col--products {
+    margin-bottom: 1em;
+}
+.water-testing__col--products > .water-testing__title {
+    margin-top: 36px;
+}
+.wt-product--t {
+    display: none;
+}
+.water-testing__row--result {
+    display: none;
+}
+.water-testing .water-testing__input {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 8px 10px;
+    width: 280px;
+}
+.water-testing .water-testing__input:disabled {
+    background: #eeeeee;
+}
+.water-testing__test {
+    color: #bb9157;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 9px;
+}
+.water-testing__test::after {
+    content: ':';
+}
+.wt-tests {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px -20px 0;
+    width: calc(100% + 40px);
+}
+.wt-tests__item {
+    margin: 0 20px 16px 20px;
+    position: relative;
+}
+.wt-tests__title {
+    font-weight: bold;
+    margin: 0 0 6px;
+}
+.wt-tests__line [type="radio"] {
+    left: -5000px;
+    position: fixed;
+    z-index: -2;
+}
+.wt-tests__label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 31px;
+    margin: 0 0 6px 0;
+    min-width: 184px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.wt-tests__label span {
+    background: #aaa;
+    display: inline-block;
+    height: 23px;
+    margin-right: 12px;
+    position: relative;
+    width: 54px;
+}
+.wt-tests__radio:checked + .wt-tests__label {
+    background: #eee;
+    font-weight: bold;
+}
+.wt-tests__radio:checked + .wt-tests__label span {
+}
+.water-testing__icon {
+    background-color: #000;
+    display: inline-block;
+    height: 34px;
+    margin-right: 7px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    min-width: 34px;
+    width: 34px;
+}
+.water-testing__icon--brown {
+    background-color: #b18952;
+}
+.water-testing__icon--red {
+    background-color: #e02b20;
+}
+.water-testing__icon--gray {
+    background-color: #999;
+}
+.water-testing__icon--white {
+    background-color: #fff;
+}
+.water-testing__icon--info {
+    -webkit-mask-image: url(../img/info.svg);
+    mask-image: url(../img/info.svg);
+    mask-size: 98%;
+}
+.water-testing__icon--warning {
+    -webkit-mask-image: url(../img/caution.svg);
+    mask-image: url(../img/caution.svg);
+}
+.water-testing__icon--bell {
+    -webkit-mask-image: url(../img/bell.svg);
+    mask-image: url(../img/bell.svg);
+}
+.water-testing__icon--print {
+    height: 29px;
+    -webkit-mask-image: url(../img/print.svg);
+    mask-image: url(../img/print.svg);
+}
+.water-testing__icon--mail {
+    -webkit-mask-image: url(../img/mail.svg);
+    mask-image: url(../img/mail.svg);
+}
+.water-testing__icon--talk {
+    -webkit-mask-image: url(../img/talk.svg);
+    mask-image: url(../img/talk.svg);
+}
+.water-testing__icon--save {
+    -webkit-mask-image: url(../img/save.svg);
+    mask-image: url(../img/save.svg);
+}
+.water-testing__icon--plus {
+    -webkit-mask-image: url(../img/plus.svg);
+    mask-image: url(../img/plus.svg);
+}
+.wt-info-box__title {
+    font-size: 105%;
+    font-weight: 600;
+    margin: 6px 0 6px;
+}
+.wt-info-box__prefix {
+    font-size: 60%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.wt-info-box__result-product {
+    margin: 0 0 8px;
+}
+.wt-info-box__text p {
+    margin: 0;
+    padding: 0;
+}
+.wt-info-box__text ul {
+    margin-bottom: 0;
+    padding: 3px 17px 5px !important;
+}
+.wt-info-box__text {
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+.wt-info-box__products a {
+    display: inline-block;
+    padding: 0 0 0 4px;
+}
+.water-testing__warning {
+    align-items: center;
+    background: #F8F7F7;
+    border: 1px solid #B8B0AD;
+    border-radius: 4px;
+    color: #413e3d;
+    display: flex;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0.55em 0 1.1em;
+    padding: 7px 8px;
+}
+.water-testing__warning .water-testing__icon {
+    background-color: #423e3d;
+}
+.wt-button, #yith-welrp .yith-welrp-submit-button {
+    align-items: center;
+    border: 3px solid #bb9157;
+    border-radius: 2px;
+    color: #bb9157;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 12px 14px;
+    min-height: 50px;
+    padding: 7px 34px 6px 32px;
+    position: relative;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+textarea.wt-modal__input {
+    height: 118px;
+}
+#yith-welrp .yith-welrp-submit-button {
+    background: transparent;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.wt-button--shadow {
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 5px 6px 10px rgba(0, 0, 0, 0.10);
+}
+.wt-button:hover {
+    opacity: 0.88;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+.wt-button:active {
+    opacity: 0.7;
+}
+.wt-result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    left: -14px;
+    position: relative;
+    top: -2px;
+}
+.water-testing__col--actions {
+    margin-top: 2em;
+}
+.wt-help {
+    background: #F8F7F7;
+    border: 1px solid #B8B0AD;
+    border-radius: 4px;
+    color: #413e3d;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 12px 0 0;
+    padding: 7px 14px;
+}
+.wt-help__title {
+    font-size: 105%;
+    font-weight: 600;
+    padding: 7px 14px 0;
+}
+.wt-help__text {
+    padding: 3px 14px 0;
+}
+.wt-result-action--save {
+    border-color: #e02b20;
+    color: #e02b20;
+}
+.wt-previous__item {
+    display: flex;
+    font-size: 94%;
+}
+.wt-previous__name {
+    cursor: default;
+    margin-right: 16px;
+    font-weight: bold;
+}
+.wt-previous__view {
+    color: #b47a28;
+    display: inline-block;
+    margin-right: 16px;
+}
+.wt-previous__remove {
+    cursor: pointer;
+    color: #999;
+    transition: all 0.5s ease-in-out;
+}
+.wt-previous__remove:hover {
+    color: #e02b20;
+}
+.wt-previous--current {
+    color: #b47a28;
+}
+.wt-previous--current .wt-previous__view, .wt-previous--current .wt-previous__remove {
+    display: none;
+}
+.water-testing__h--small {
+    font-size: 160%;
+}
+.water-testing__row--previous {
+    margin-bottom: 46px;
+}
+.water-testing__row--previous .water-testing__h {
+    padding: 0 0 18px;
+    width: 100%;
+}
+.spa-loader .water-testing::before {
+    background: rgba(255, 255, 255, 0.5);
+    content: '';
+    display: flex;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+}
+.wt-product__button-text {
+    display: none;
+}
+.wt-product__button-text--default {
+    display: block;
+}
+.wt-product--loading .wt-product__button-text--loading {
+    display: flex;
+}
+.wt-product--to-cart .wt-product__button-text--to-cart {
+    display: inline;
+}
+.wt-product--loading .wt-product__button-text--default, .wt-product--to-cart .wt-product__button-text--default {
+    display: none;
+}
+.wt-product--loading .wt-product__button {
+    background: #000;
+}
+.wt-product__button-text--loading {
+    background: url(../img/spinner.png) no-repeat center center / 175%;
+    height: 27px;
+    margin: auto;
+    width: 27px;
+}
+.wt-loading-init {
+    background: url(../img/spinner.png);
+    height: 27px;
+    left: -999px;
+    position: fixed;
+    width: 27px;
+    z-index: -9;
+}
+.wt-modal {
+    display: none;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 110;
+}
+.wt-modal__box {
+    background-image: url("/wp-content/uploads/2020/03/SwimSpa_IMG_2683_web-510x382.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 -6.7px 30px rgba(0, 0, 0, 0.068), 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.08), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    color: #fff;
+    max-width: 96%;
+    margin: auto;
+    overflow: hidden;
+    padding: 39px 70px 43px;
+    position: relative;
+    z-index: 8;
+}
+.wt-modal__box::after {
+    background-color: rgba(29,38,51,0.86);
+    content: '';
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.wt-modal__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 29px;
+    line-height: 1.3em;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+.wt-modal__label {
+    display: block;
+}
+.wt-modal__input {
+    border: none !important;
+    margin: 4px 0;
+    padding: 15px 18px !important;
+    width: 100%;
+}
+.wt-modal .wt-button {
+    background: transparent;
+    border-color: #fff;
+    border-width: 2px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    width: 100%;
+}
+.wt-modal .wt-button:hover {
+    opacity: 1;
+    box-shadow: none;
+    background-color: rgba(255,255,255,0.08);
+}
+.wt-modal__bg {
+    background: rgba(255, 255, 255, 0.2);
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.wt-modal__complete, .wt-modal__loading {
+    display: none;
+}
+.wt-modal__box--loading .wt-modal__loading, .wt-modal__box--complete .wt-modal__complete {
+    display: flex;
+}
+.wt-modal__box--loading .wt-modal__body, .wt-modal__box--complete .wt-modal__body {
+    visibility: collapse;
+}
+.wt-modal__loading, .wt-modal__complete {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 6;
+}
+.wt-modal__complete > div {
+    margin: auto;
+    padding: 36px;
+    text-align: center;
+}
+.wt-modal__complete .wt-modal__complete-text {
+    font-size: 120%;
+    margin-bottom: 8px;
+}
+.wt-modal__loading div {
+    background: url(../img/spinner.png) no-repeat center center / 175%;
+    height: 27px;
+    margin: auto;
+    width: 27px;
+}
+@media screen and (max-width: 800px) {
+    .water-testing .water-testing__col {
+        margin-left: 0;
+        width: 100%;
+    }
+    .water-testing .select2-container {
+        width: 100% !important;
+    }
+    .water-testing .water-testing__col--or {
+        margin: 0;
+        padding: 17px 0 0;
+        text-align: center;
+    }
+    .water-testing__col--strip {
+        margin-bottom: 1.4rem;
+    }
+    .wt-products {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    .wt-product {
+        width: 100%;
+    }
+    .wt-modal__box {
+        padding: 39px 39px 43px;
+    }
+}
+@media print {
+    header {
+        display: none;
+    }
+    #page-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    #sidebar {
+        display: none;
+    }
+    #left-area {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    .et_right_sidebar #main-content .container::before {
+        display: none;
+    }
+    #main-footer {
+        display: none;
+    }
+    #main-content .container {
+        padding: 0 !important;
+        margin: 0;
+    }
+    .water-testing__col--actions, .water-testing__col--products {
+        display: none;
+    }
+    .water-testing .water-testing__col--or {
+        margin: 8px 14px 5px 13px;
+        width: auto;
+    }
+    .water-testing__col--or + .water-testing__col {
+        margin-left: 0;
+    }
+    .wt-tests__line:not(.wt-radio-selected) {
+        display: none;
+    }
+    .wt-tests__label span, .wt-previous, .entry-title.main_title {
+        display: none;
+    }
+    .water-testing__warning, .water-testing__row--title, .water-testing__icon, .water-testing__hs::after {
+        display: none;
+    }
+    .water-testing__title {
+        margin: 0;
+    }
+    .water-testing__row {
+        margin: 0 0 14px;
+    }
+    .water-testing .water-testing__input {
+        width: 240px;
+    }
+    .select2-container {
+        min-width: 240px;
+        width: 240px !important;
+    }
+    .water-testing__hs > span {
+        padding: 0;
+        margin-left: 0;
+    }
+    .water-testing__hs {
+        margin: 0.6em 0 0.8em;
+    }
+    .wt-tests__label {
+        min-width: 114px;
+    }
+    .wt-tests__item {
+        margin: 0 0 16px 20px;
+    }
+    .water-testing__result-box {
+        margin: 0.2em 0 0.2em;
+        padding: 0 24px 0 11px;
+    }
+    .wt-result-boxes {
+        margin-bottom: 1em;
+    }
+    .water-testing__col--info .water-testing__result-box {
+        margin: 0.6em 0;
+    }
+    .water-testing__result {
+        padding: 2px 0 1px;
+    }
+}
