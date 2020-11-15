@@ -1,26 +1,26 @@
 <?php
 /**
- * THESPA_Requests Class.
+ * HTGVOO_Requests Class.
  *
- * @package THESPA_waterTesting\Classes
- * @version 1.0.13
+ * @package HTGVOO_integration\Classes
+ * @version 1.0.1
  */
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Class THESPA_Requests
+ * Class HTGVOO_Requests
  */
-class THESPA_Requests {
+class HTGVOO_Requests {
 
 	/**
 	 * To email form.
 	 */
 	public static function form_handler() {
-		if ( !empty( $_POST ) AND isset( $_POST['email'] ) AND isset( $_POST['data'] ) AND wp_verify_nonce( $_POST['nonce'], 'thespashoppe' ) ) {
+		if ( !empty( $_POST ) AND isset( $_POST['email'] ) AND isset( $_POST['data'] ) AND wp_verify_nonce( $_POST['nonce'], 'htgvooshoppe' ) ) {
 
 			$message = ( isset( $_POST['message'] ) ) ? $_POST['message'] : false;
 			$email = ( isset( $_POST['email'] ) ) ? $_POST['email'] : false;
-			$is_message = ( $_POST['action'] == 'thespa_get-help' ) ? true : false;
+			$is_message = ( $_POST['action'] == 'HTGVOO_get-help' ) ? true : false;
 
 			$data = $_POST['data'];
 			$js_id = $data['id'];
@@ -32,12 +32,12 @@ class THESPA_Requests {
 			$save = self::save_method( $data, $js_id, get_current_user_id()*1 );
 
 			// Generate PDF
-			$report = new THESPA_Report();
+			$report = new HTGVOO_Report();
 			$data['id'] = $js_id;
 			$generate = $report->generate( $generate_data );
 
 			// Send Email
-			$mail = new THESPA_Email();
+			$mail = new HTGVOO_Email();
 			$r = $mail->to_email( $email, $js_id, $generate, $is_message, $message );
 
 			if ( $save['html'] ) {
@@ -59,7 +59,7 @@ class THESPA_Requests {
 	 * @param  $user_id
 	 */
 	public static function save( $user_id = false ) {
-		if ( !empty( $_POST ) AND isset( $_POST['data'] ) AND wp_verify_nonce( $_POST['nonce'], 'thespashoppe' ) ) {
+		if ( !empty( $_POST ) AND isset( $_POST['data'] ) AND wp_verify_nonce( $_POST['nonce'], 'htgvooshoppe' ) ) {
 			$data = $_POST['data'];
 			$js_id = $data['id'];
 			$user_id = ( !$user_id ) ? get_current_user_id() : $user_id;
@@ -105,7 +105,7 @@ class THESPA_Requests {
 				", $user_id, $js_id, json_encode( $data ) ) );
 
 			if ( $q ) {
-				return ['html' => THESPA_shortcodes::getSaves(), 'data' => $data, 'success' => '1'];
+				return ['html' => HTGVOO_shortcodes::getSaves(), 'data' => $data, 'success' => '1'];
 			}
 		} else {
 			$q = $wpdb->query(
@@ -116,9 +116,9 @@ class THESPA_Requests {
 				", json_encode( $data ), $exist_id ) );
 
 			if ( $q ) {
-				return ['html' => THESPA_shortcodes::getSaves(), 'data' => $data, 'success' => '2'];
+				return ['html' => HTGVOO_shortcodes::getSaves(), 'data' => $data, 'success' => '2'];
 			} else {
-				return ['data' => $data, 'html' => THESPA_shortcodes::getSaves(), 'error' => 'already exist'];
+				return ['data' => $data, 'html' => HTGVOO_shortcodes::getSaves(), 'error' => 'already exist'];
 			}
 		}
 
@@ -129,7 +129,7 @@ class THESPA_Requests {
 	 * Remove test.
 	 */
 	public static function remove_test() {
-		if ( !empty( $_POST ) AND isset( $_POST['js_id'] ) AND wp_verify_nonce( $_POST['nonce'], 'thespashoppe' ) ) {
+		if ( !empty( $_POST ) AND isset( $_POST['js_id'] ) AND wp_verify_nonce( $_POST['nonce'], 'htgvooshoppe' ) ) {
 			global $wpdb;
 
 			$js_id = $_POST['js_id'];

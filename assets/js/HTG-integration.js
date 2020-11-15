@@ -792,7 +792,7 @@
 
     // Init.
     $(function () {
-        window.thespashoppe = new TheSpaShopPE();
+        window.htgvooshoppe = new TheSpaShopPE();
     });
 
 }($ || window.jQuery));

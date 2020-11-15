@@ -2,15 +2,15 @@
 /**
  * Shortcodes Class.
  *
- * @package THESPA_waterTesting\Classes
- * @version 1.0.13
+ * @package HTGVOO_integration\Classes
+ * @version 1.0.1
  */
 defined( 'ABSPATH' ) || exit;
 
 /**
- * THESPA_Shortcodes Class.
+ * HTGVOO_Shortcodes Class.
  */
-class THESPA_shortcodes {
+class HTGVOO_shortcodes {
 
 	/**
 	 * Show button Subscribe button.
@@ -22,8 +22,8 @@ class THESPA_shortcodes {
 		$atts = shortcode_atts( array(
 		), $attributes );
 
-		THESPA_Media::resources();
-        $obj_data = new THESPA_data();
+		HTGVOO_Media::resources();
+        $obj_data = new HTGVOO_data();
         $data = $obj_data->get_data();
         $volume = $obj_data->get_list_of( 'volume' );
 		$devises = $obj_data->get_list_of( 'devices' );
@@ -274,12 +274,12 @@ class THESPA_shortcodes {
 	/**
 	 * Show saves html.
 	 *
-	 * @param  THESPA_data|bool $obj_data
+	 * @param  HTGVOO_data|bool $obj_data
 	 * @return string
 	 */
 	public static function getSaves( $obj_data = false ) {
         if ( $obj_data === false ) {
-	        $obj_data = new THESPA_data();
+	        $obj_data = new HTGVOO_data();
         }
 		$saves = $obj_data->get_saves();
 		$current_link = get_the_permalink( get_the_ID() );
@@ -314,7 +314,7 @@ class THESPA_shortcodes {
 	/**
 	 * Return first part of name of save.
 	 *
-	 * @param  THESPA_data $obj_data
+	 * @param  HTGVOO_data $obj_data
 	 * @param  object $js_data
 	 * @param  string $postfix
 	 * @return string
